@@ -1,0 +1,34 @@
+include ./partials/head
+include ./partials/nav
+
+.container.profile-container
+  .profile-info
+    .column
+      .profile-pic
+        img 
+      p #{name}
+      p Date Joined
+      p Current City
+  .profile-posts 
+    .posts-column
+      .post-single
+        .post-content
+          a(href='#')
+            h3 Boston, MA 
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum justo eu ipsum euismod, eget lacinia odio vulputate. Proin at velit placerat, aliquam libero in, iaculis ex. Donec mi libero, facilisis sit amet tortor non, egestas mattis libero. Etiam fermentum justo est, id aliquet ex euismod vel. Fusce malesuada odio nec est semper aliquam. Nunc vel enim ante. Nulla mauris nulla, vestibulum ac luctus id, luctus sit amet enim.
+        .post-buttons
+          a(href='#')
+            span.glyphicon.glyphicon-edit
+          a(href='#')
+            span.glyphicon.glyphicon-trash
+      .post-single
+        .post-content
+          a(href='#')
+            h3 Oakland, CA
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum justo eu ipsum euismod, eget lacinia odio vulputate. Proin at velit placerat, aliquam libero in, iaculis ex. Donec mi libero, facilisis sit amet tortor non, egestas mattis libero. Etiam fermentum justo est, id aliquet ex euismod vel. Fusce malesuada odio nec est semper aliquam. Nunc vel enim ante. Nulla mauris nulla, vestibulum ac luctus id, luctus sit amet enim.
+        .post-buttons
+          a(href='#')
+            span.glyphicon.glyphicon-edit
+          a(href='#')
+            span.glyphicon.glyphicon-trash
+include ./partials/footer

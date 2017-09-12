@@ -1,0 +1,23 @@
+DROP TABLE IF EXISTS member;
+DROP TABLE IF EXISTS city;
+DROP TABLE IF EXISTS post;
+
+CREATE TABLE member (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255),
+  email VARCHAR(255) UNIQUE,
+  password VARCHAR(255),
+  joined DATE,
+  city VARCHAR(255)
+);
+
+CREATE TABLE city (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255)
+);
+
+CREATE TABLE post (
+  id SERIAL PRIMARY KEY,
+  created DATE,
+  city_id INT REFERENCES city(id)
+);

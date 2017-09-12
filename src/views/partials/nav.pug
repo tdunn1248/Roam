@@ -1,0 +1,11 @@
+header.header
+  a.header-title(href='/') Roam
+  ul.nav.nav-pills.header-nav
+      if (name) 
+        li(role='presentation')
+          a(href='/users/signup') Signout
+      else
+        li(role='presentation')
+          a(href='/users/login') Login
+        li(role='presentation')
+          a(href='/users/signup') Signup

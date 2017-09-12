@@ -1,0 +1,176 @@
+h1 {
+  color: orange;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+}
+
+.header-title {
+  color: white;
+}
+
+.index-header {
+  justify-content: flex-end;
+}
+
+.index-title {
+  position: relative;
+  font-size: 38px;
+  color: white;
+  margin-left: 3em;
+}
+
+.index-blurb {
+  position: relative;
+  margin-left: 6em;
+}
+
+.header-title {
+  font-size: 24px;
+  margin: 0;
+  color: white;
+  margin-left: 4em;
+}
+
+.header-title:hover {
+  text-decoration: none;
+  color: orange;
+  font-size: 24px;
+  margin: 0;
+  color: white;
+  margin-left: 4em;
+}
+
+header .nav {
+  margin-right: 4.5em;
+}
+
+.nav-pills li a {
+  color: white;
+}
+
+.nav-pills li a:hover {
+  background-color: orange;
+}
+
+.main-container,
+.profile-container,
+.city-view-container {
+  display: flex;
+  min-width: 400px;
+  min-height: 400px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  flex: 1;
+}
+
+.main-container {
+  flex-direction: column;
+  background-color: aqua;
+}
+
+.profile-container {
+  flex-direction: row;
+}
+
+.city-view-container {
+
+}
+
+.background-container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-image: url('./img/balloons-over-bagan.jpg');
+  background-color: pink;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.profile-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+  min-height: 400px;
+  color: white;
+  background-color: blue;
+  flex: 1;
+}
+.post-content h3 {
+  margin: 0;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  max-height: 400px;
+}
+
+.profile-pic {
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+}
+.profile-info img {
+}
+
+.posts-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+.post-single {
+  padding: 1em;
+  margin-bottom: 1em;
+  width: 90%;
+  display: flex;
+  border: 1px solid black;
+}
+
+.post-buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  justify-content: space-around;
+}
+
+.profile-posts {
+  display: flex;
+  height: 75%;
+  min-height: 400px;
+  background-color: goldenrod;
+  flex: 2;
+}
+.form-inline {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  margin-bottom: 1em;
+}
+
+footer {
+  height: 50px;
+  width: 100%;
+  background-color: #000;
+}

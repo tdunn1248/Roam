@@ -1,0 +1,13 @@
+include ./partials/head
+
+include ./partials/nav
+
+.container.main-container 
+  h1 Signup
+  form.form-inline(method='POST' action='/users/signup')
+    input.form-control.mb-2.mr-sm-2.mb-sm-0(type='text', name='email' placeholder='Email...')
+    input.form-control(type='password', name='password' placeholder='Password...')
+    input.form-control(type='password', name='confirmPassword' placeholder='Confirm Password...')
+    button.btn.btn-primary(type='submit') Signup
+
+include ./partials/footer 
