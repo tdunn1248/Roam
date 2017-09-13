@@ -5,7 +5,9 @@ const bodyParser = require('body-parser')
 const routes = require('./server/routes')
 const cookieSession = require('cookie-session')
 
-
+// sign members up and login
+// reset DB and create dummy data with new-post form for a city
+//
 
 app.set('view engine', 'pug')
 app.set('views', __dirname + '/views')
@@ -17,6 +19,13 @@ app.use(cookieSession({
   keys: ['key1', 'key2'],
   maxAge: 60000000
 }))
+
+app.use((request, response, next) => {
+  response.locals.query = ''
+  response.locals.error = ''
+  response.locals.cities = null
+  next()
+})
 
 app.use(routes)
 

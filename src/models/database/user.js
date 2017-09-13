@@ -1,14 +1,21 @@
 const db = require('./config/config')
 
-const readAll = () => {
+const readAll = (email) => {
   let query = `
     SELECT *
     FROM member
+    WHERE email = $1
   `
-  return db.any(query)
-          .catch(error => {
-            console.log('from db', error);
-          })
+  return db.any(query, [email])
+}
+
+const readAllById = (id) => {
+  let query = `
+    SELECT *
+    FROM member
+    WHERE id = $1
+  `
+  return db.any(query, [id])
 }
 
 const create = (email, password) => {
@@ -23,9 +30,8 @@ const create = (email, password) => {
           })
 }
 
-
-
 module.exports = {
   readAll,
+  readAllById,
   create
 }

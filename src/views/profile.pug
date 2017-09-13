@@ -6,29 +6,22 @@ include ./partials/nav
     .column
       .profile-pic
         img 
-      p #{name}
-      p Date Joined
-      p Current City
+      p #{user}
+      p Member Since: #{dateJoined.toDateString()}
+      p Current City: 
   .profile-posts 
     .posts-column
-      .post-single
+      form(method='GET', action='/cities')
+        input.btn.btn-success(type='submit' value='See All Cities')
+      each post in posts 
         .post-content
-          a(href='#')
-            h3 Boston, MA 
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum justo eu ipsum euismod, eget lacinia odio vulputate. Proin at velit placerat, aliquam libero in, iaculis ex. Donec mi libero, facilisis sit amet tortor non, egestas mattis libero. Etiam fermentum justo est, id aliquet ex euismod vel. Fusce malesuada odio nec est semper aliquam. Nunc vel enim ante. Nulla mauris nulla, vestibulum ac luctus id, luctus sit amet enim.
-        .post-buttons
-          a(href='#')
-            span.glyphicon.glyphicon-edit
-          a(href='#')
-            span.glyphicon.glyphicon-trash
-      .post-single
-        .post-content
-          a(href='#')
-            h3 Oakland, CA
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum justo eu ipsum euismod, eget lacinia odio vulputate. Proin at velit placerat, aliquam libero in, iaculis ex. Donec mi libero, facilisis sit amet tortor non, egestas mattis libero. Etiam fermentum justo est, id aliquet ex euismod vel. Fusce malesuada odio nec est semper aliquam. Nunc vel enim ante. Nulla mauris nulla, vestibulum ac luctus id, luctus sit amet enim.
-        .post-buttons
-          a(href='#')
-            span.glyphicon.glyphicon-edit
-          a(href='#')
-            span.glyphicon.glyphicon-trash
+          .post-single
+            a(href='/cities/' + post.name + '/' + post.city_id)
+              h3= post.name
+            p= post.content
+            a(href='#')
+              span.glyphicon.glyphicon-edit
+            a(href='#')
+              span.glyphicon.glyphicon-trash
+              
 include ./partials/footer

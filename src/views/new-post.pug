@@ -1,0 +1,20 @@
+include ./partials/head
+
+header.header
+  a.header-title(href='/') Roam
+  ul.nav.nav-pills.header-nav
+    li(role='presentation')
+      a(href='/users/signout') Logout
+
+.container.new-post-container
+  h1 New Post
+  form.form-group.new-post-form(method='POST' action='/posts')
+    select(class='city-option' name='city') 
+      each city in cities   
+        option(value=city.id name=city.name) #{city.name}
+      textarea.form-control(name='content' placeholder='What did you think?...')
+      input.btn.btn-success.btn-new-post(type='submit')
+    
+
+
+include ./partials/footer

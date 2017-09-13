@@ -1,3 +1,8 @@
+html,
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 h1 {
   color: orange;
 }
@@ -16,6 +21,29 @@ body {
   background-color: #000;
 }
 
+.city-photo-container {
+  background-color: #000;
+  display: flex;
+  width: 100%;
+  height: 30%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2em;
+  /*flex: 1;*/
+}
+
+.city-view-container h1 {
+  color: white;
+}
+
+.posts-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  max-width: 500px;
+  flex: 1;
+}
+
 .header-title {
   color: white;
 }
@@ -29,10 +57,12 @@ body {
   font-size: 38px;
   color: white;
   margin-left: 3em;
+  margin-bottom: 0;
 }
 
 .index-blurb {
   position: relative;
+  margin-top: 0;
   margin-left: 6em;
 }
 
@@ -41,6 +71,10 @@ body {
   margin: 0;
   color: white;
   margin-left: 4em;
+}
+
+.city-option {
+  margin-bottom: 1em;
 }
 
 .header-title:hover {
@@ -58,10 +92,12 @@ header .nav {
 
 .nav-pills li a {
   color: white;
+
 }
 
 .nav-pills li a:hover {
   background-color: orange;
+  transition: 1s;
 }
 
 .main-container,
@@ -79,15 +115,59 @@ header .nav {
 
 .main-container {
   flex-direction: column;
-  background-color: aqua;
+  background-image: url('./img/ryan-wilson-6626.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .profile-container {
   flex-direction: row;
 }
 
-.city-view-container {
+.new-post-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
 
+textarea.form-control {
+  min-width: 420px;
+  min-height: 200px;
+}
+
+.new-post-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-new-post {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.city-view-container {
+  display: flex;
+  flex-direction: column;
+  /*background-color: aqua;*/
+}
+
+.city-view-image {
+  flex: 1;
+  background-color: goldenrod;
+  border: 1px solid black;
+  width: 100%;
+  height: 50%;
+  max-height: 280px;
+}
+
+.city-posts-container {
+  display: flex;
+  background-color: pink;
+  flex: 1;
+  width: 100%;
+  height: 50%;
 }
 
 .background-container {
@@ -112,8 +192,26 @@ header .nav {
   background-color: blue;
   flex: 1;
 }
+
+.post-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex: 1;
+}
+.post-content a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .post-content h3 {
+  display: inline;
   margin: 0;
+}
+
+.post-content p {
+  display: inline;
 }
 .column {
   display: flex;
@@ -127,7 +225,9 @@ header .nav {
   height: 150px;
   width: 150px;
   border: 1px solid black;
+  margin-bottom: 1em;
 }
+
 .profile-info img {
 }
 
@@ -137,14 +237,23 @@ header .nav {
   justify-content: center;
   align-items: center;
   padding: 1em;
+  flex: 1;
+}
+
+.posts-content p {
+  display: inline;
 }
 .post-single {
   padding: 1em;
   margin-bottom: 1em;
   width: 90%;
+  max-height: 120px;
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   border: 1px solid black;
 }
+
 
 .post-buttons {
   display: flex;

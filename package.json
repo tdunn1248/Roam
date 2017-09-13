@@ -7,7 +7,9 @@
     "start": "nodemom ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1",
     "db:create": "dropdb --if-exists roam && createdb roam",
-    "db:schema": "psql roam < ./src/database/schema.sql"
+    "db:schema": "psql roam < ./src/models/database/schema.sql",
+    "db:insert": "psql roam < ./src/models/database/seed_data/load-data.sql",
+    "db:init": "npm run db:create && npm run db:schema && npm run db:insert"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,7 @@
   },
   "homepage": "https://github.com/tdunn1248/Roam#readme",
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "body-parser": "^1.18.0",
     "cookie-session": "^1.3.1",
     "dotenv": "^4.0.0",

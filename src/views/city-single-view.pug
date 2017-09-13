@@ -2,6 +2,15 @@ include ./partials/head
 
 include ./partials/nav
 
-.container.city-view-container 
 
+.container.city-view-container
+  .city-photo-container 
+    h1 #{city}
+  .posts-container
+    .posts-column
+      each post in posts 
+        .post-content 
+          p= post.email
+          p= post.content
+      
 include ./partials/footer

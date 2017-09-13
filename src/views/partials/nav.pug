@@ -1,11 +1,19 @@
 header.header
   a.header-title(href='/') Roam
   ul.nav.nav-pills.header-nav
-      if (name) 
-        li(role='presentation')
-          a(href='/users/signup') Signout
-      else
-        li(role='presentation')
-          a(href='/users/login') Login
-        li(role='presentation')
-          a(href='/users/signup') Signup
+    if (webpage == '/cities/city/id')
+      li(role='presentation')
+        a(href='/users/profile/' + user) Profile
+      li(role='presentation')
+        a(href='/posts') Add New Post
+    if (webpage == '/new-post') 
+      li(role='presentation')
+        a(href='/users/profile/') Profile
+    if (user) 
+      li(role='presentation')
+        a(href='/users/signout') Logout
+    if (!user)          
+      li(role='presentation')
+        a(href='/users/login') Login
+      li(role='presentation')
+        a(href='/users/signup') Signup
