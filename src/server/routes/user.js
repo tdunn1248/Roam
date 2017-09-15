@@ -1,10 +1,8 @@
 const router = require('express').Router()
 const user = require('../../models/user')
 const {hashPassword, comparePasswords} = require('../../models/bcrypt-helper')
-const {checkUserSession} = require('../middleware/authentication')
+const checkUserSession = require('../middleware/authentication')
 const {readUserContent} = require('../../models/post')
-
-router.use(checkUserSession)
 
 router.route('/login')
       .get((request, response) => {response.status(200).render('login')})
@@ -52,8 +50,7 @@ router.route('/signup')
           })
       })
 
-router.get('/profile/:id', (request, response) => {
-  console.log('buddy', request.session);
+router.get('/profile/:id', checkUserSession, (request, response) => {
   user.readAllById(request.params.id).then(userInfo => {
     readUserContent(request.params.id)
       .then(userContent => {

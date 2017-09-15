@@ -21,6 +21,15 @@ body {
   background-color: #000;
 }
 
+.cities-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cities-container a {
+
+}
+
 .city-photo-container {
   background-color: #000;
   display: flex;

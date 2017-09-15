@@ -1,6 +1,4 @@
-module.exports = {
-  checkUserSession: function(error, request, response, next) {
-    if (request.session === {}) { response.render('login') }
+module.exports = function(request, response, next) {
+    if (!request.session.id) { response.render('login') }
     else { next() }
   }
-}

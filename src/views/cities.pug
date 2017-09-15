@@ -2,9 +2,10 @@ include ./partials/head
 include ./partials/nav
 
 .container 
-  if (cities)
-    each city in cities
-      a(href='/cities/' + city.name + '/' + city.id)
-        li= JSON.parse(JSON.stringify(city.name))
+  .cities-container
+    if (cities)
+      each city in cities
+        a(href='/cities/' + city.name + '/' + city.id)
+          li= JSON.parse(JSON.stringify(city.name))
 
 include ./partials/footer
